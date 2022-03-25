@@ -1,0 +1,39 @@
+section {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: 'Bungee', 'sans-serif';
+
+}
+output.counter {
+  text-align: right;
+}
+
+button {
+  padding: 0.2em 0.7em;
+  color: white;
+  width: fit-content;
+  background-color: rgb(15, 15, 228);
+  border: none;
+  }
+
+
+  textarea {
+    display: inline-block;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: blue;
+    background-color: #f4f1ec;
+    resize: none;
+    width: 100%;
+    height: 33px;
+    font-family: 'Source Sans Pro', 'sans-serif';
+  }
+
+  div.count {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  
+  
