@@ -22,10 +22,12 @@ body {
   
 }
 
-/* nav {
-  font-family: 'Bungee', 'sans-serif';
-} */
-
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding-left: 10%;
+ }
 
 
 /*

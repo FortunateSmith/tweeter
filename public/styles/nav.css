@@ -7,14 +7,16 @@ nav {
   color: #FFFFFF;
   font-family: 'Bungee', 'sans-serif';
   padding: 1.5em;
+  z-index: 1;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
 }
-
 
 
 .title {
   display: flex;
   justify-content: space-between;
-    font-size: 200%;
+  font-size: 200%;
 }
 
 
