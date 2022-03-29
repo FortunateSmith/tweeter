@@ -10,6 +10,7 @@
 
 // creates html element to be rendered from json object
 const createTweetElement = function(tweetData) {
+
   const $tweet = $(
     `<article class="tweet">
     <header>
@@ -40,6 +41,7 @@ const createTweetElement = function(tweetData) {
 
 // renders html created with createTweetElement function
 const renderTweet = function(data) {
+  
   //loop through json data
   data.forEach((tweetData) => {
     // store data of current index in loop
@@ -70,12 +72,17 @@ const loadTweets = () => {
 // 
 $(document).ready(function() {
   console.log("ready!");
-
-  loadTweets();
-
+ 
+  
   $("form").submit(function(event) {
     event.preventDefault();
-    
+
+    const $formInput = $('#tweet-text');
+
+    console.log($formInput.val());
+    if ($formInput.val() === "") {
+    alert("Form is empty!")
+    } else {
     // async request to post new tweets
     $.ajax({
       url: "/tweets",
@@ -85,10 +92,16 @@ $(document).ready(function() {
       success: function() {
         $("textarea").val("");
         $.get("/tweets", data => {
+
+          // ISSUE: not where/how to execute alert?
+          
           const newTweet = [data.slice(-1).pop()];
           renderTweet(newTweet);
+        
         });
       }
     });
+    }
   });
+  loadTweets();
 });
