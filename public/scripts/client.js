@@ -9,6 +9,8 @@ const escape = function (str) {
 
 
 
+
+
 // creates html element to be rendered from json object
 const createTweetElement = function (tweetData) {
   const $tweet = $(
@@ -34,6 +36,7 @@ const createTweetElement = function (tweetData) {
   );
   return $tweet;
 };
+
 
 
 
@@ -72,35 +75,46 @@ const loadTweets = () => {
 
 
 
-
 $(document).ready(function () {
   console.log("ready!");
-
+  
+  loadTweets();
+  
   $("form").submit(function (event) {
     event.preventDefault();
 
     const $formInput = $("#tweet-text");
-
-    if ($formInput.val() === "") {
-      alert("Form is empty!");
-    } else {
-      // async request to post new tweets
-      $.ajax({
-        url: "/tweets",
-        method: "POST",
-        type: "application/json",
-        data: $(this).serialize(),
-        success: function () {
-          $("textarea").val("");
-          $.get("/tweets", (data) => {
-            // ISSUE: not where/how to execute alert?
-
-            const newTweet = [data.slice(-1).pop()];
-            renderTweet(newTweet);
-          });
-        },
-      });
+    
+    // Dynamic error messages
+    // ISSUE: form submits if spaces entered to text field
+    if ($formInput.val() === "" ) {
+      $("#err-msg").text("Field Cannot Be Empty.");
+      $(".error").slideDown();
+      // QUESTION: is return necessary here and below?
+      return;
     }
+    if ($formInput.val().length > 140) {
+      $("#err-msg").text("Field Cannot Exceed 140 Characters.");
+      $(".error").slideDown();
+      return;
+    }
+
+    // $(".error").hide()
+    // async request to post new tweets
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      type: "application/json",
+      data: $(this).serialize(),
+
+      // if ajax request is successful
+      success: function () {
+        $("textarea").val("");
+        $.get("/tweets", (data) => {
+          const newTweet = [data.slice(-1).pop()];
+          renderTweet(newTweet);
+        });
+      },
+    });
   });
-  loadTweets();
 });
