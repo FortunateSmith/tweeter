@@ -83,23 +83,23 @@ $(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
 
-    const $formInput = $("#tweet-text");
-    
     // Dynamic error messages
     // ISSUE: form submits if spaces entered to text field
-    if ($formInput.val() === "" ) {
+    if ($("#tweet-text").val().trim().length === 0) {
       $("#err-msg").text("Field Cannot Be Empty.");
       $(".error").slideDown();
       // QUESTION: is return necessary here and below?
       return;
     }
-    if ($formInput.val().length > 140) {
+    if ($("#tweet-text").val().length > 140) {
       $("#err-msg").text("Field Cannot Exceed 140 Characters.");
       $(".error").slideDown();
       return;
     }
-
-    // $(".error").hide()
+    
+    $(".error").hide()
+    
+    
     // async request to post new tweets
     $.ajax({
       url: "/tweets",
