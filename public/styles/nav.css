@@ -1,17 +1,16 @@
 nav {
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  font-family: 'Bungee', 'sans-serif';
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: "Bungee", "sans-serif";
   padding: 1.5em;
   z-index: 1;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
 }
-
 
 .title {
   display: flex;
@@ -19,18 +18,20 @@ nav {
   font-size: 200%;
 }
 
-
-
-div {
+nav div.container {
   display: flex;
   flex-direction: column;
+  font-family: "Source Sans Pro";
 }
-
-
-
 
 .fa-solid {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
+  padding-left: 45%;
+  color: rgb(202, 5, 5);  
+}
+
+nav span.bold {
+  font-weight: 900;
 }

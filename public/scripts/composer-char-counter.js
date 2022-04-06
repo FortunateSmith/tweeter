@@ -19,11 +19,11 @@ $(document).ready(function() {
       } else {
         // if 0 or more characters left
         $(this)
-        // talk to mentor about explanation of next()
-        .next()
-        .find("output")
-        .text(charsLeft)
-        .css("color", "black");
-       }
+        // next resolves to the sibling element in HTML
+          .next()
+          .find("output")
+          .text(charsLeft)
+          .css("color", "black");
+      }
     });
-  });
+});

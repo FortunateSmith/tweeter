@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const app = express();
 
-// parses url encoded 
+// parses url encoded
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
