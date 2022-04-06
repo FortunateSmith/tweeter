@@ -6,30 +6,41 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', 'sans-serif';
-  
+  font-family: "Source Sans Pro", "sans-serif";
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   width: 90%;
   padding-left: 10%;
- }
+}
+
+main > * {
+  flex: 1 100%;
+}
 
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+@media screen and (min-width: 1024px) {
+  body {
+    flex-flow: nowrap;
+  }
+  main {
+    width: 60%;
+    margin: 8em 2em 0em 2em;
+    padding: 0;
+  }
+}

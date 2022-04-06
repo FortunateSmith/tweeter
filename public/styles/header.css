@@ -6,16 +6,15 @@ header {
   justify-content: flex-start;
   align-items: center;
   background-image: url(https://www.transparenttextures.com/patterns/beige-paper.png);
-  background-color: rgb(232, 154, 11)
+  background-color: rgb(232, 154, 11);
 }
 
-header div img{
+header div img {
   margin-top: 120px;
   width: 200px;
-  height: auto
+  height: auto;
 }
 
-
-header div h2{
+header div h2 {
   margin-top: 0px;
 }
