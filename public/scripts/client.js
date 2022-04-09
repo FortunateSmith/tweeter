@@ -94,6 +94,7 @@ $(document).ready(function() {
           const newTweet = [data.slice(-1).pop()];
           renderTweet(newTweet);
         });
+        $(".counter").val("140")
       },
     });
   });
