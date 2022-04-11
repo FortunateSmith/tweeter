@@ -94,6 +94,7 @@ $(document).ready(function() {
           const newTweet = [data.slice(-1).pop()];
           renderTweet(newTweet);
         });
+        // reset character counter fix
         $(".counter").val("140")
       },
     });
