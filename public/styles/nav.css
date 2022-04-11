@@ -5,10 +5,10 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
   color: #ffffff;
+  background-image: url("../images/asfalt-light.png");
   font-family: "Bungee", "sans-serif";
-  padding: 1.5em;
+  padding: 4vh;
   z-index: 1;
 }
 
@@ -18,20 +18,37 @@ nav {
   font-size: 200%;
 }
 
-nav div.container {
+div.container {
   display: flex;
   flex-direction: column;
   font-family: "Source Sans Pro";
 }
 
-.fa-solid {
+.fa-angles-down {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 45%;
-  color: rgb(202, 5, 5);  
+  color: rgb(202, 5, 5);
+  animation-name: upDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 nav span.bold {
   font-weight: 900;
+}
+
+@keyframes upDown {
+  to {
+    padding-top: 10px;
+  }
+}
+
+.bold-me {
+  font-weight: bold;
+}
+
+.fa-angles-down {
+  color: red;
 }
