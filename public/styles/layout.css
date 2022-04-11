@@ -32,15 +32,55 @@ main > * {
   flex: 1 100%;
 }
 
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+@media screen and (max-width: 492px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav div.container {
+    display: flex;
+    flex-direction: row;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   body {
+    max-height: 100vh;
     flex-flow: nowrap;
   }
+
+  .header-stuff {
+    position: absolute;
+    left: 0px;
+    top: 40%;
+    height: 14em;
+    width: 40%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("../images/asfalt-light.png");
+    background-color: #e89a0b;
+  }
+
   main {
     width: 60%;
-    margin: 8em 2em 0em 2em;
+    margin: 5em 2em 0em 40%;
     padding: 0;
+    overflow: scroll;
+    max-height: 100vh;
+  }
+
+  nav {
+    background-color: #4056a1;
+  }
+
+  .tweet-container {
+    width: 60vw;
   }
 }

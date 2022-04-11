@@ -1,12 +1,12 @@
 header {
   display: flex;
   height: 400px;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  background-image: url(https://www.transparenttextures.com/patterns/beige-paper.png);
-  background-color: rgb(232, 154, 11);
+  background-image: url("../images/asfalt-light.png");
+  background-color: #e89a0b;
 }
 
 header div img {
@@ -17,4 +17,8 @@ header div img {
 
 header div h2 {
   margin-top: 0px;
+}
+
+.header-stuff {
+  background-color: #e89a0b;
 }
