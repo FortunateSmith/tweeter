@@ -10,17 +10,23 @@ Tweeter is a single-page, AJAX-based Twitter clone. It usese jQuery, HTML5, and 
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Screenshots
-![In Action](https://github.com/FortunateSmith/tweeter/blob/master/public/images/tweeter.gif?raw=true)
+
 
 **At 1024px or above**
 
 
 <img width="768" src="./public/images/At_1024px.png">
 
-**Below 1024px**
+**Samsung Galaxy A51/A71**
 
 
-<img width="768" src="https://github.com/FortunateSmith/tweeter/blob/master/public/images/%3C1024px.jpg">
+<img width="400" src="./public/images/Samsung_Galaxy_A51:A71.png">
+
+
+**iPad Air**
+
+
+<img width="600" src="./public/images/iPad_Air.png">
 
 ## Dependencies
 
