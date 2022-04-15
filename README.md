@@ -15,7 +15,7 @@ Tweeter is a single-page, AJAX-based Twitter clone. It usese jQuery, HTML5, and 
 **At 1024px or above**
 
 
-<img width="768" src="https://github.com/FortunateSmith/tweeter/blob/master/public/images/%3E%3D1024px.jpg">
+<img width="768" src="./public/images/At_1024px.png">
 
 **Below 1024px**
 
