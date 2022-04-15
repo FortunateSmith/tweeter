@@ -31,6 +31,8 @@
   </head>
   
   <body>
+    
+    <!-- Top nav bar (fixed) -->
     <nav>
       <span class="title">tweeter</span>
       <div class="container">
@@ -39,6 +41,8 @@
       </div>
     </nav>
     <div class="layout-wrapper">
+
+    <!-- Header contatining user info -->
     <header class="avatar-header">
       <div>
         <img src="/images/profile-hex.png"> 
@@ -47,13 +51,21 @@
         <h2>Kilgore Trout</h2>
       </div>
     </header>
-    
+    <!-- Page-specific (main) content -->
     <main class="container">
+
+      <!-- New tweet composition -->
       <section class="new-tweet">
+
+        <!-- Form to submit a new tweet -->
         <form id="submit-form" action="/tweets/" method="post">
+
+          <!-- Div to show error message -->
           <div class="error">           
             <span id="err-msg"></span>
           </div>
+
+          <!-- Textarea for new tweets -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="count">
             <button type="submit">Tweet</button>
@@ -61,6 +73,8 @@
           </div>
         </form>
       </section>
+
+      <!-- New tweet articles -->
       <section class="tweet-container">
       </section>
     </main>
