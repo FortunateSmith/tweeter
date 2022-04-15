@@ -2,6 +2,7 @@ header {
   display: flex;
   height: 400px;
   width: 100vw;
+  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -10,7 +11,6 @@ header {
 }
 
 header div img {
-  margin-top: 120px;
   width: 200px;
   height: auto;
 }
@@ -19,6 +19,8 @@ header div h2 {
   margin-top: 0px;
 }
 
-.header-stuff {
+
+.avatar-header {
   background-color: #e89a0b;
+  padding-top: 120px;
 }

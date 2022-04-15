@@ -45,7 +45,12 @@ main > * {
 
   nav div.container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+  
+
+  i.fa-solid {
+    padding-left: 0%
   }
 }
 
@@ -60,14 +65,15 @@ main > * {
     flex-flow: nowrap;
   }
 
-  .header-stuff {
-    position: absolute;
+  header.avatar-header {
+    position: fixed;
     left: 0px;
-    top: 40%;
+    top: 12em;
     height: 14em;
-    width: 40%;
+    width: 35%;
+    margin-left: 1em;
     flex-direction: column;
-    justify-content: flex-end;
+    padding-top: 1.5em;
     align-items: center;
     background-image: url("../images/asfalt-light.png");
     background-color: #e89a0b;

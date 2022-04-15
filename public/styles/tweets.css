@@ -7,11 +7,13 @@ article.tweet {
   flex-direction: column;
   align-items: center;
   border-style: solid;
+  border-width: 3px;
+  border-color: #000020;
   font-family: Source Sans Pro;
   margin-bottom: 20px;
-  box-shadow: 0px 3px 12px rgb(48, 45, 45);
+  box-shadow: 0px 0px 0px rgb(48, 45, 45);
   transition: all 300ms ease-in-out;
-  max-width: 700px;
+  max-width: 100%;
 }
 
 article.tweet:hover {
@@ -50,6 +52,7 @@ article header p {
 article footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 20%;
   width: 92%;
   background-image: none;
