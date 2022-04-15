@@ -53,6 +53,6 @@ div.error {
 }
 
 textarea::placeholder {
-  /* position: bottom; */
+  position: relative;
   top: 70px;
 }
